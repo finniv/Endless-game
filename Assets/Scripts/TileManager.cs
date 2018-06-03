@@ -9,7 +9,7 @@ public class TileManager : MonoBehaviour
 
 	private static TileManager instance;
 
-	private Stack<GameObject> leftTiles = new Stack<GameObject>();
+	private Stack<GameObject> leftTiles , topTiles = new Stack<GameObject>();
     public static TileManager Instance
     {
         get
@@ -39,7 +39,7 @@ public class TileManager : MonoBehaviour
 	{
 		int randomIndexTile = Random.Range(0,2);
 		int randomIndexChild = Random.Range(0,2);
-		CurrentTile = Instantiate(TilesArray[randomIndexTile],CurrentTile.transform.GetChild(0).transform.GetChild(randomIndexChild).position,Quaternion.identity);
+		CurrentTile = Instantiate(TilesArray[randomIndexTile],CurrentTile.transform.GetChild(0).transform.GetChild(randomIndexTile).position,Quaternion.identity);
 	}
 	
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TileScript : MonoBehaviour {
-public float FallDelay = 0.1f;
+public float FallDelay = 0.0001f;
 
 	void Start () {
 		
